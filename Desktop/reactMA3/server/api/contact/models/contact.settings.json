@@ -1,0 +1,25 @@
+{
+  "info": {
+    "name": "contact"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Surname": {
+      "type": "string"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Message": {
+      "type": "richtext"
+    }
+  },
+  "connection": "default",
+  "collectionName": "contacts"
+}
