@@ -1,0 +1,25 @@
+{
+  "info": {
+    "name": "Profile"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "profile_image": {
+      "collection": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "Description": {
+      "type": "richtext"
+    }
+  },
+  "connection": "default",
+  "collectionName": "profiles"
+}
