@@ -43,7 +43,9 @@ export default class App extends Component {
         <div className="[ container-fluid ]">{this.props.children}</div>
       </div>
     ) : (
-      <Login updateLoginStatus={this.updateLogin} />
+      <>
+        <Login updateLoginStatus={this.updateLogin} />
+      </>
     );
   }
 }

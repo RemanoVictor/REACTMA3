@@ -27,7 +27,7 @@ export default class Login extends Component {
         <div className="row">
           <div className="[ col-sm-4 ]"></div>
           <div className="[ col-sm-4 ] [ login ]">
-            <h1> Log in </h1>
+            <h1> Login </h1>
             <form onSubmit={this.handleSubmit}>
               <p> Enter Username </p>
               <input
