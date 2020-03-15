@@ -8,7 +8,7 @@ export default class About extends Component {
         <div className="[ container ]">
           <div className="[ row ][ aboutWelcome ]">
             <div className="[ col-sm-12 ]">
-              <h1> About </h1>
+              <h1> ABOUT </h1>
             </div>
           </div>
           <div className="[ about-content ]">
