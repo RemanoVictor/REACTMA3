@@ -5,7 +5,7 @@ import { RICK_API } from "../constants/constant";
 
 import Cards from "./../components/cards";
 
-export default class Dashboard extends Component {
+export default class Home extends Component {
   state = {
     cardData: undefined,
     filteredResults: [],
@@ -47,13 +47,9 @@ export default class Dashboard extends Component {
       <div>
         <div className="[ container-fluid ][ landingPage ]">
           <div className="[ row ]">
-            <div className="[ col-sm-4 ]"></div>
-            <div className="[ col-sm-4 ]">
-              <h1 className="[ welcomeHeading ]">
-                Welcome, {sessionStorage.getItem("user")}
-              </h1>
+            <div className="[ col-sm-12 ]">
+              <h1 className="[ welcomeHeading ]">RICK AND MORTY</h1>
             </div>
-            <div className="[ col-sm-4 ]"></div>
           </div>
         </div>
 
@@ -61,7 +57,7 @@ export default class Dashboard extends Component {
           <div className="[ row ]">
             <div className="[ col-sm-12 ]">
               <form>
-                <p>Enter a search phrase</p>
+                <p>Like, Pick a card Morty</p>
                 <input
                   type="text"
                   name="username"
@@ -72,13 +68,6 @@ export default class Dashboard extends Component {
                 <br />
               </form>
             </div>
-          </div>
-          <div className="[ row ]">
-            <div className="[ col-sm-4 ]"></div>
-            <div className="[ col-sm-4 ]">
-              <h1 className="CardWelcome"> SomeCards </h1>
-            </div>
-            <div className="[ col-sm-4 ]"></div>
           </div>
 
           <div className="row">
@@ -94,6 +83,8 @@ export default class Dashboard extends Component {
                         name={value.name}
                         img={`${value.image}`}
                         gender={value.gender}
+                        species={value.species}
+                        status={value.status}
                       />
                     );
                   })
@@ -111,20 +102,13 @@ export default class Dashboard extends Component {
                         id={value.id}
                         name={value.name}
                         img={`${value.image}`}
-                        gender={value.gender}
+                        species={value.species}
+                        status={value.status}
                       />
                     );
                   })
                 ) : (
-                  <div>
-                    <p>
-                      <img
-                        className="mini__image"
-                        src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/09b24e31234507.564a1d23c07b4.gif"
-                        alt="loading"
-                      />
-                    </p>
-                  </div>
+                  <div></div>
                 )}
               </>
             )}

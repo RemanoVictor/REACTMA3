@@ -6,70 +6,79 @@ export default class About extends Component {
     return (
       <>
         <div className="[ container ]">
-          <div className="[ row ][ profileWelcome ]">
+          <div className="[ row ][ aboutWelcome ]">
             <div className="[ col-sm-12 ]">
-              <h2> About </h2>
+              <h1> About </h1>
             </div>
           </div>
-          <div className="[ row ]">
+          <div className="[ row ][ about-content ]">
             <div className="[ col-md-12]">
-              <h4> Magic the Gathering</h4>
-              <p>
-                Magic: The Gathering (colloquially known as Magic cards, Magic
-                or just MTG) is a collectible and digital collectible card game
-                created by Richard Garfield.[1] Released in 1993 by Wizards of
-                the Coast (now a subsidiary of Hasbro), Magic was the first
-                trading card game and has approximately twenty million players
-                as of 2015,[2][3][4] and over twenty billion Magic cards
-                produced in the period from 2008 to 2016, during which time it
-                grew in popularity.[5] Each game of Magic represents a battle
-                between wizards known as planeswalkers who cast spells, use
-                artifacts, and summon creatures as depicted on individual cards
-                in order to defeat their opponents, typically, but not always,
-                by draining them of their 20 starting life points in the
-                standard format. Although the original concept of the game drew
-                heavily from the motifs of traditional fantasy role-playing
-                games such as Dungeons & Dragons, the gameplay bears little
-                similarity to pencil-and-paper adventure games, while
-                simultaneously having substantially more cards and more complex
-                rules than many other card games.
-              </p>
+              <h4>Rick and Morty</h4>
             </div>
-            <div className="row">
-              <div className="col-sm-12">
-                <Accordion>
-                  <Card>
-                    <Card.Header>
-                      <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                        Read More:
-                      </Accordion.Toggle>
-                    </Card.Header>
-                    <Accordion.Collapse eventKey="0">
-                      <Card.Body>
-                        Magic can be played by two or more players, either in
-                        person with printed cards or on a computer, smartphone
-                        or tablet with virtual cards through the Internet-based
-                        software Magic: The Gathering Online or other video
-                        games such as Magic: The Gathering Arena. It can be
-                        played in various rule formats, which fall into two
-                        categories: constructed and limited. Limited formats
-                        involve players building a deck spontaneously out of a
-                        pool of random cards with a minimum deck size of 40
-                        cards; in constructed formats, players create decks from
-                        cards they own, usually with a minimum of 60 cards per
-                        deck. New cards are released on a regular basis through
-                        expansion sets. An organized tournament system (the DCI)
-                        played at the international level and a worldwide
-                        community of professional Magic players has developed,
-                        as well as a substantial resale market for Magic cards.
-                        Certain cards can be monetarily valuable due to their
-                        rarity in production and utility in gameplay, with
-                        prices ranging from a few cents to thousands of dollars.
-                      </Card.Body>
-                    </Accordion.Collapse>
-                  </Card>
-                </Accordion>
-              </div>
+          </div>
+          <div className="row">
+            <div className="col-sm-12">
+              <Accordion>
+                <Card>
+                  <Card.Header>
+                    <p>
+                      Rick and Morty is an American adult animated science
+                      fiction sitcom created by Justin Roiland and Dan Harmon
+                      for Cartoon Network's late-night programming block Adult
+                      Swim. The series follows the misadventures of cynical mad
+                      scientist Rick Sanchez and his good-hearted but fretful
+                      grandson Morty Smith, who split their time between
+                      domestic life and interdimensional adventures. Roiland
+                      voices the eponymous characters, with Chris Parnell,
+                      Spencer Grammer and Sarah Chalke voicing the rest of the
+                      family. The series originated from an animated short
+                      parody film of Back to the Future, created by Roiland for
+                      Channel 101, a short film festival co-founded by Harmon.
+                      The series has been acclaimed by critics for its
+                      originality, creativity and humor. The series has been
+                      picked up for an additional seventy episodes over an
+                      unspecified number of seasons, beginning with season 4.
+                      The fourth season premiered on November 10, 2019 and will
+                      consist of ten episodes.
+                    </p>
+                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                      Read More:
+                    </Accordion.Toggle>
+                  </Card.Header>
+                  <Accordion.Collapse eventKey="0">
+                    <Card.Body>
+                      <p>
+                        Rick is an eccentric and alcoholic mad scientist, who
+                        eschews many ordinary conventions such as school,
+                        marriage, love, and family. He frequently goes on
+                        adventures with his 14-year-old grandson, Morty, a
+                        kind-hearted but easily distressed boy, whose naïve but
+                        grounded moral compass plays counterpoint to Rick's
+                        Machiavellian ego. Morty's 17-year-old sister, Summer,
+                        is a more conventional teenager who worries about
+                        improving her status among her peers and sometimes
+                        follows Rick and Morty on their adventures. The kids'
+                        mother, Beth, is a generally level-headed person and
+                        assertive force in the household, though self-conscious
+                        about her professional role as a horse surgeon. She is
+                        dissatisfied with her marriage to Jerry, a simple-minded
+                        and insecure person, who disapproves of Rick's influence
+                        over his family. Different versions of the characters
+                        inhabit other dimensions throughout the multiverse and
+                        their personal characteristics can vary from one reality
+                        to another. The show's original Rick identifies himself
+                        as "Rick Sanchez of Earth Dimension C-137", in reference
+                        to his original universe, but this does not necessarily
+                        apply to every other member of the Smith household. For
+                        instance, in the first-season episode "Rick Potion #9",
+                        after turning the entire world population into monsters,
+                        Rick and Morty move to a different dimension, leaving
+                        Summer, Beth and Jerry behind.
+                      </p>
+                    </Card.Body>
+                  </Accordion.Collapse>
+                </Card>
+              </Accordion>
             </div>
           </div>
         </div>
