@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-import axios from "axios";
-import { STRAPI_API } from "./../constants/constant";
-
 export default class Contact extends Component {
   state = {
     firstname: "",
@@ -15,13 +12,11 @@ export default class Contact extends Component {
     messageError: true
   };
 
-  componentDidMount() {}
-
   handleChange = input => {
     let name = input.target.name;
     let value = input.target.value;
     let emailPattern = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+.([A-Za-z]{2,4})$/;
-    let numberPattern = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+    let numberPattern = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s/0-9]*$/;
 
     switch (name) {
       case "firstname":
@@ -54,21 +49,10 @@ export default class Contact extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const { firstname, number, email, message } = this.state;
-    axios
-      .post(STRAPI_API + "contacts", {
-        Name: firstname,
-        Number: number,
-        Email: email,
-        Message: message
-      })
-      .then(result => {
-        console.log(result);
-        alert("Thank you for making contact, we will reply as soon as we can.");
-      })
-      .catch(err => {
-        console.log("computer says no!");
-      });
+    const { firstname } = this.state;
+    alert(
+      `Hey ${firstname}, Thanks for reaching out. We will get back to you ASAP!`
+    );
   };
 
   render() {

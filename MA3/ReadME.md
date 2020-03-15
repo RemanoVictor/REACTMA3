@@ -1,3 +1,3 @@
-Username: MA3
+Username: cameron
 
-Password: enter!
+Password: chikipowpow!

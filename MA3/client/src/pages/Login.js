@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import axios from "axios";
-
-import { STRAPI_API } from "./../constants/constant";
 
 export default class Login extends Component {
   state = {
@@ -19,20 +16,9 @@ export default class Login extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    axios
-      .post(STRAPI_API + "auth/local", {
-        identifier: this.state.username,
-        password: this.state.password
-      })
-      .then(response => {
-        sessionStorage.setItem("token", response.data.jwt);
-        sessionStorage.setItem("user", response.data.user.username);
-        sessionStorage.setItem("email", response.data.user.email);
-        this.props.updateLoginStatus();
-      })
-      .catch(error => {
-        console.log("error 404. You done fucked up");
-      });
+    sessionStorage.setItem("username", this.state.username);
+    sessionStorage.setItem("password", this.state.password);
+    this.props.updateLoginStatus();
   };
 
   render() {

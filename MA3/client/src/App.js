@@ -25,7 +25,8 @@ export default class App extends Component {
   };
 
   render() {
-    return sessionStorage.getItem("token") !== null && this.state.isLoggedIn ? (
+    return sessionStorage.getItem("username") === "cameron" &&
+      sessionStorage.getItem("password") === "chikipowpow!" ? (
       <div className="App">
         <div className="[ container-fluid ]">
           <div className="[ row ] [ navigation ]">
@@ -33,7 +34,9 @@ export default class App extends Component {
               <Nav />
             </div>
             <div className="[ col-sm-2 ]">
-              <button onClick={this.logOut}>LogOut</button>
+              <button onClick={this.logOut} className="btn btn-default">
+                LogOut
+              </button>
             </div>
           </div>
         </div>
