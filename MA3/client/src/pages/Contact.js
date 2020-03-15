@@ -81,7 +81,7 @@ export default class Contact extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-sm-6">
+          <div className="col-sm-8">
             <h1> Contact Form </h1>
             <form onSubmit={this.handleSubmit}>
               <p>Enter your name</p>
@@ -137,6 +137,7 @@ export default class Contact extends Component {
               />
             </form>
           </div>
+          <div className="col-sm-4"></div>
         </div>
       </div>
     );
