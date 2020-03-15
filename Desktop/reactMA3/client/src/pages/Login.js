@@ -19,6 +19,7 @@ export default class Login extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+
     axios
       .post(STRAPI_API + "auth/local", {
         identifier: this.state.username,
@@ -59,7 +60,7 @@ export default class Login extends Component {
                 className="form-control"
               />
               <br />
-              <input type="submit" className="btn" />
+              <input type="submit" className="btn btn-primary" />
             </form>
           </div>
           <div className="[ col-sm-4 ]"></div>

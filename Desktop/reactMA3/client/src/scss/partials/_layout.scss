@@ -37,6 +37,7 @@ body {
 
     .navigation {
         background-color: #a9d3e9;
+        border-bottom: 5px solid greenyellow;
 
         .navbar-inverse {
             background-color: inherit;
@@ -44,12 +45,13 @@ body {
         }
 
         button {
-            background-color: black;
-            border: none;
+            background-color: transparent;
+            border: 2px solid white;
             padding: 5px;
             border-radius: 5px;
-            font-size: 1.3em;
-            margin-top: 7px;
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: black;
         }
 
         .navbar-nav {
@@ -64,6 +66,7 @@ body {
             }
         }
     }
+
 
     .navbar-nav>li>a:hover {
         color: red;

@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 const Cards = props => {
   return (
     <div className="[ col-sm-12 ] [ card ]">
-      <h3> {props.name} </h3>
+      <h3>Name: {props.name} </h3>
       <img src={props.img} alt="just random" className="[ CardImg ]" />
-      <p> {props.gender} </p>
+      <p>Species:{props.species}</p>
+      <p>Gender: {props.gender} </p>
+      <p>Status:{props.status}</p>
       <Link to={`/CardSpecific/${props.id}`} className="btn btn-primary">
         Read More
       </Link>

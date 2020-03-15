@@ -87,7 +87,9 @@ export default class Home extends Component {
                         id={value.id}
                         name={value.name}
                         img={`${value.image}`}
+                        species={value.species}
                         gender={value.gender}
+                        status={value.status}
                       />
                     );
                   })
@@ -105,7 +107,9 @@ export default class Home extends Component {
                         id={value.id}
                         name={value.name}
                         img={`${value.image}`}
+                        species={value.species}
                         gender={value.gender}
+                        status={value.status}
                       />
                     );
                   })

@@ -6,11 +6,11 @@ import { STRAPI_API } from "./../constants/constant";
 export default class Contact extends Component {
   state = {
     firstname: "",
-    lastname: "",
+    number: "",
     email: "",
     message: "",
     firstnameError: true,
-    lastnameError: true,
+    numberError: true,
     emailError: true,
     messageError: true
   };
@@ -21,6 +21,7 @@ export default class Contact extends Component {
     let name = input.target.name;
     let value = input.target.value;
     let emailPattern = /^([A-Za-z0-9_\-.])+@([A-Za-z0-9_\-.])+.([A-Za-z]{2,4})$/;
+    let numberPattern = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
 
     switch (name) {
       case "firstname":
@@ -28,10 +29,10 @@ export default class Contact extends Component {
           ? this.setState({ firstnameError: false })
           : this.setState({ firstnameError: true });
         break;
-      case "lastname":
-        value !== ""
-          ? this.setState({ lastnameError: false })
-          : this.setState({ lastnameError: true });
+      case "number":
+        numberPattern.test(value)
+          ? this.setState({ numberError: false })
+          : this.setState({ numberError: true });
         break;
       case "email":
         emailPattern.test(value)
@@ -53,11 +54,11 @@ export default class Contact extends Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    const { firstname, lastname, email, message } = this.state;
+    const { firstname, number, email, message } = this.state;
     axios
       .post(STRAPI_API + "contacts", {
         Name: firstname,
-        Surname: lastname,
+        Number: number,
         Email: email,
         Message: message
       })
@@ -73,7 +74,7 @@ export default class Contact extends Component {
   render() {
     const {
       firstnameError,
-      lastnameError,
+      numberError,
       emailError,
       messageError
     } = this.state;
@@ -100,15 +101,15 @@ export default class Contact extends Component {
                 Please enter a valid Name
               </p>
               <br />
-              <p>Enter your lastname</p>
+              <p>Enter your number</p>
               <input
                 type="text"
-                name="lastname"
+                name="number"
                 onChange={this.handleChange}
                 className="form-control"
               />
-              <p className={lastnameError ? "error" : "error_hide"}>
-                Please enter a valid Surname
+              <p className={numberError ? "error" : "error_hide"}>
+                Please enter a valid number
               </p>
               <br />
               <p>Enter your email</p>
@@ -136,9 +137,9 @@ export default class Contact extends Component {
               <input
                 type="submit"
                 disabled={
-                  firstnameError || lastnameError || emailError || messageError
+                  firstnameError || numberError || emailError || messageError
                 }
-                className="btn"
+                className="btn btn-primary"
               />
             </form>
           </div>

@@ -33,7 +33,9 @@ export default class App extends Component {
               <Nav />
             </div>
             <div className="[ col-sm-2 ]">
-              <button onClick={this.logOut}>LogOut</button>
+              <button onClick={this.logOut} className="btn">
+                LogOut
+              </button>
             </div>
           </div>
         </div>
