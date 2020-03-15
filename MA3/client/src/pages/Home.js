@@ -102,6 +102,7 @@ export default class Home extends Component {
                         id={value.id}
                         name={value.name}
                         img={`${value.image}`}
+                        gender={value.gender}
                         species={value.species}
                         status={value.status}
                       />

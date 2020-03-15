@@ -30,7 +30,7 @@ export default class Contact extends Component {
           : this.setState({ firstnameError: true });
         break;
       case "number":
-        value !== ""
+        numberPattern.test(value)
           ? this.setState({ numberError: false })
           : this.setState({ numberError: true });
         break;
@@ -40,7 +40,7 @@ export default class Contact extends Component {
           : this.setState({ emailError: true });
         break;
       case "message":
-        numberPattern.test(value)
+        value !== ""
           ? this.setState({ messageError: false })
           : this.setState({ messageError: true });
         break;
@@ -102,7 +102,9 @@ export default class Contact extends Component {
                 onChange={this.handleChange}
                 className="form-control"
               />
-              <p className="error"> Please enter a valid number</p>
+              <p className={numberError ? "error" : "error_hide"}>
+                Please enter a valid number
+              </p>
               <br />
               <p>Enter your email</p>
               <input
