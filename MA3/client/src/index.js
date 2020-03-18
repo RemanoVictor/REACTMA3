@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import CardSpecific from "./pages/CardSpecific";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import StarWars from "./pages/StarWars";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route path="/Contact" component={Contact} />
         <Route path="/About" exact component={About} />
         <Route path="/CardSpecific/:id" exact component={CardSpecific} />
+        <Route path="/StarWars" component={StarWars} />
       </Switch>
     </App>
   </Router>,
