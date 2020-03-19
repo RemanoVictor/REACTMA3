@@ -13,7 +13,6 @@ export default function StarWars() {
       setswCharacters(swData.data.results);
     });
   }, []);
-
   return (
     <div className="container">
       <div className="row">

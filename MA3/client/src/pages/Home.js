@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 
 import { RICK_API } from "../constants/constant";
-
 import Cards from "./../components/cards";
 
 export default class Home extends Component {
