@@ -25,8 +25,8 @@ export default class App extends Component {
   };
 
   render() {
-    return sessionStorage.getItem("username") === "cameron" &&
-      sessionStorage.getItem("password") === "chikipowpow!" ? (
+    return sessionStorage.getItem("username") === "admin" &&
+      sessionStorage.getItem("password") === "123" ? (
       <div className="App">
         <div className="[ container-fluid ]">
           <div className="[ row ] [ navigation ]">

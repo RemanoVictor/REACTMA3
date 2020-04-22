@@ -2,8 +2,8 @@ import React, { Component } from "react";
 
 export default class Login extends Component {
   state = {
-    username: "cameron",
-    password: "chikipowpow!",
+    username: "admin",
+    password: "123",
   };
 
   handleChange = (input) => {
@@ -35,6 +35,7 @@ export default class Login extends Component {
                 name="username"
                 onChange={this.handleChange}
                 className="form-control"
+                placeholder="admin"
               />
               <br />
               <p> Password </p>
@@ -43,6 +44,7 @@ export default class Login extends Component {
                 name="password"
                 onChange={this.handleChange}
                 className="form-control"
+                placeholder="123"
               />
               <br />
               <input type="submit" className="btn" />
