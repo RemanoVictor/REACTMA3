@@ -40,7 +40,7 @@ export default class App extends Component {
             </div>
           </div>
         </div>
-        <div className="[ container-fluid ]">{this.props.children}</div>
+        <div className="[ container-fluid ]">{props.children}</div>
       </div>
     ) : (
       <>
