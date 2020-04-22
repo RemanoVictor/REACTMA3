@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("https://cdn.lowgif.com/full/d9239235a99f1e89-as-per-request-the-rick-and-morty-garage-visualizer-now-with.gif");
+    background-repeat: repeat-y;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: 'Genghis khan', sans-serif;
+
+    img {
+        width: 100%;
+        height: 20%;
+    }
+
+    h1 {
+        font-family: 'get schwifty', sans-serif;
+        font-size: 7em;
+        color: greenyellow;
+        text-shadow: 10px 20px 40px white;
+    }
+
+    p {
+        font-size: 2em;
+    }
+
+    input {
+        color: black;
+    }
+
+    .navigation {
+        background-color: #a9d3e9;
+        border-bottom: 5px solid greenyellow;
+
+        .navbar-inverse {
+            background-color: inherit;
+            border: none;
+        }
+
+        button {
+            background-color: transparent;
+            border: 1px solid white;
+            // color: black;
+            width: 50%;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 1.5em;
+            margin-top: 5%;
+        }
+
+        .navbar-nav {
+            li {
+                a {
+                    margin-top: 5px;
+                    color: #314568;
+                    font-size: 1.5em;
+
+
+                }
+            }
+        }
+    }
+
+    .navbar-nav>li>a:hover {
+        color: red;
+    }
+}
+
+.card {
+    box-shadow: 0px 10px 20px 10px #ffffff;
+    margin: 15px;
+    width: 30%;
+    padding: 10px;
+    height: auto;
+    background-color: rgba($color: #000000, $alpha: 0.8);
+
+    img {
+        height: 20%;
+    }
+
+
+}
+
+.error {
+    color: red;
+
+    &_border {
+        border: solid 1px red;
+    }
+
+    &_hide {
+        display: none;
+    }
+}
+
+.accordion {
+    .card {
+        width: 100%;
+    }
+}
