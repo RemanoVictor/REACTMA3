@@ -8,18 +8,18 @@ import Login from "./pages/Login";
 
 export default class App extends Component {
   state = {
-    isloggedIn: true
+    isloggedIn: true,
   };
 
   updateLogin = () => {
     this.setState({
-      isLoggedIn: true
+      isLoggedIn: true,
     });
   };
 
   logOut = () => {
     this.setState({
-      isloggedIn: false
+      isloggedIn: false,
     });
     sessionStorage.clear();
   };
@@ -40,7 +40,7 @@ export default class App extends Component {
             </div>
           </div>
         </div>
-        <div className="[ container-fluid ]">{props.children}</div>
+        <div className="[ container-fluid ]">{this.props.children}</div>
       </div>
     ) : (
       <>
